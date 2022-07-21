@@ -1,4 +1,4 @@
-// 1. Write a progeram to print a given number is odd or even
+// 1. Write a program to print a given number is odd or even
 
 // let a = 8
 // if(a % 2 == 0){
