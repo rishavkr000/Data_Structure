@@ -1,7 +1,6 @@
 class Node{
-    constructor(data, next = null){
+    constructor(data){
         this.data = data;
-        this.next = next;
     }
 }
 
@@ -11,51 +10,73 @@ class LinkedList{
         this.tail = null;
     }
 
-    addInFront(data){
-        const node = new Node(data)
-        if(this.head == null){
-            this.head = node;
-            this.tail = node;
+    addToFront(data){
+        let node = new Node(data)
+        if(!this.head){
+            this.head = node
+            this.tail = node
         }else{
-            node.next = this.head;
-            this.head = node;
+            let temp = this.head
+            this.head = node
+            node.next = temp
         }
     }
 
-    addInEnd(data){
+    addToEnd(data){
         let node = new Node(data)
-        if(this.head == null){
-            this.head = node;
-            this.tail = node;
+        if(!this.head){
+            this.head = node
+            this.tail = node
         }else{
-            this.tail.next = node;
+            this.tail.next = node
             this.tail = node
         }
     }
 
     addAfterKthPosition(data, k){
-        let count = 1;
-        let curr = this.head;
-        if(k == 0){
-            this.addInFront(data)
-        }                                 
-        while(curr && count != k){
+        let count = 1
+        let curr = this.head
+        while(curr && count !== k){
             curr = curr.next
             count++
         }
         if(!curr && count !== k){
             throw Error("Invalid Position")
-        }else if(!curr && Count == k){
-            this.addInEnd(data)
+        }else if(!curr && count == k){
+            this.addToEnd(data)
         }else{
-            let node = new Node(data)
-            node.next = this.head.next
-            this.head.next = node
-        }        
+            const node = new Node(data)
+            node.next = curr.next
+            curr.next = node
+        }
     }
 
+    deleteFromFront(){
+        if(!this.head){
+            throw Error("Can't delete from Empty List")
+        }
+        let curr = this.head
+        this.head = curr.next
+    }
+
+    deleteFromEnd(){
+        if(!this.head){
+            throw Error("Can't delete from Empty List")
+        }
+
+    }
+
+    deleteFromMiddle(k){
+        let count = 1
+        if(k == count){
+            this.deleteFromFront()
+        }
+        
+    }
+
+
     printList(){
-        let curr = this.head;
+        let curr = this.head
         while(curr){
             console.log(curr.data)
             curr = curr.next
@@ -65,22 +86,19 @@ class LinkedList{
 
 const list = new LinkedList()
 
-list.addInFront(10)
-list.addInFront(20)
-list.addInFront(30)
+list.addToFront(5)
+list.addToFront(6)
+list.addToEnd(8)
+list.addToEnd(9)
+list.addAfterKthPosition(7,3)
+list.addAfterKthPosition(45,1)
+
 
 list.printList()
 
-// console.log("===================")
+console.log("=============================")
 
-// list.addInEnd(7)
-// list.addInEnd(9)
-// list.addInEnd(11)
-
-// list.printList()
-
-console.log("===================")
-
-list.addAfterKthPosition(100,2)
+// list.deleteFromFront()
+list.deleteFromMiddle(6)
 
 list.printList()
