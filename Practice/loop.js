@@ -1,12 +1,14 @@
 // Q1. Write a JS code to print numbers from 1 to 10
 // Function `printNumbers()` prints numbers from 1 to 10 using for loop.
 
-/* function printNumbers(){
+/*
+function printNumbers(){
     for(let i = 1; i <= 10; i++){
         console.log(i)
     }
 }
-printNumbers() */
+printNumbers()
+*/
 
 // Q2. Write a JS code to print a 2D array
 // Function `printArray()` prints all the elements of a 2D array using nested for loops.
