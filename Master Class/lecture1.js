@@ -77,22 +77,3 @@
 
 
 // Recursion 
-
-
-let num
-function love() {
-    console.log("I Love You")
-    num++;
-    if(num <= 1){
-        love()
-    }
-    else
-        console.log("I love you so much..❤💕💖💋🌹. ")
-    }
-
-    
-function reply(){
-    console.log("I Love You too")    
-}
-love()
-reply()
