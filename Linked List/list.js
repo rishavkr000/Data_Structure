@@ -63,15 +63,36 @@ class LinkedList{
         if(!this.head){
             throw Error("Can't delete from Empty List")
         }
-
+        let curr = this.head;
+        while(curr.next !== this.tail){
+            curr= curr.next
+        }
+        curr.next = null;
+        this.tail = curr;
     }
 
-    deleteFromMiddle(k){
-        let count = 1
-        if(k == count){
+    deleteFromKthPosition(k){
+        let count = 1;
+        let curr = this.head;
+        if(k === 1){
             this.deleteFromFront()
         }
+        while(curr && count != k-1){
+            curr = curr.next;
+            count++;
+        }
+        if(!curr && count !== k){
+            throw Error("Invalid Position")
+        }
+        else{
+            let targetNode = curr.next;
+            curr.next = targetNode.next;
+            targetNode.next = null;
         
+            if(!curr.next){
+                this.tail = curr;
+            }
+        }
     }
 
 
@@ -99,6 +120,7 @@ list.printList()
 console.log("=============================")
 
 // list.deleteFromFront()
-list.deleteFromMiddle(6)
+// list.deleteFromEnd()
+list.deleteFromKthPosition(7)
 
 list.printList()

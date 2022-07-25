@@ -112,10 +112,11 @@ class LinkedList{
     // Delete node from any position
     deleteFromKthPosition(k){
         let count = 1;
+        let curr= this.firstNode
         if(k === 1){
             this.deleteFromFront();
         }
-        while(curr && count !== k - 1){
+        while(curr && count != k - 1){
             curr = curr.next;
             count++;
         }
@@ -199,7 +200,7 @@ list.printList()
 
 console.log("=========================")
 
-list.deleteFromFront()
+list.deleteFromKthPosition(4)
 
 list.printList()
 
