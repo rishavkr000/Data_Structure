@@ -144,7 +144,7 @@ class LinkedList{
             }
             let nextNode=this.firstNode.next;
             this.firstNode.next =curr;
-            curr =this.firstNode;
+            curr = this.firstNode;
             this.firstNode = nextNode
         }
         this.firstNode=curr;

@@ -18,6 +18,12 @@
 
 
 
+
+// **********************************************************************************************************
+
+
+
+
 // 2. What are the drawbacks of callback and what is callback hell?
 
 /* 
@@ -27,6 +33,15 @@ Drawbacks of callback :- The biggest problem with callbacks is that they do not 
 Callback hell :- Callback hell is a phenomenon that afflicts a JavaScript developer when he tries to execute multiple asynchronous operations are after the other.
 
 */
+
+
+
+
+// **********************************************************************************************************
+
+
+
+
 
 // 3. What is the difference between callback and promise? How can you write the same async operation using promise and callback?
 
@@ -72,7 +87,17 @@ console.log('First')
 console.log('Third')
 */
 
-// 4. Difference between function and Arrow Function
+
+
+
+
+// **********************************************************************************************************
+
+
+
+
+
+// 4. Difference between normal function and Arrow Function
 
 /*
  1. First difference is different syntax.

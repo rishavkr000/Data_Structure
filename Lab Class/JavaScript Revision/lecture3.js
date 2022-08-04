@@ -15,12 +15,12 @@ function promise1(){
 function promise2(){
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve("Promise2 resolved")
+            reject("Promise2 rejected")
         }, 1000)
     })
 }
 
-// promise1().then(res1=>{
+// promise1().then(res1=>{     
 //     console.log("res1 resolved", res1)
 //     return promise2()
 // }).then(res2=>{
