@@ -31,7 +31,7 @@ class LinkedList{
         // If Linked List is not empty
         else{
             const temp = this.firstNode;
-            this.firstNode = node;
+            t                = node;
             node.next = temp;
         }
     }

@@ -132,7 +132,7 @@ console.log('Third')
     const es6 = a => console.log("ES6 function",a)
     es6(10)
 
- 4. In nornal function, if we don't pass any argument then we write the blank parenthesis, while in arrow function, if we don't pass any argument then we simply add underscore.
+ 4. In normal function, if we don't pass any argument then we write the blank parenthesis, while in arrow function, if we don't pass any argument then we simply add underscore.
 
     function es5(){
     console.log("ES5 function")

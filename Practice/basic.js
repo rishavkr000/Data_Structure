@@ -8,7 +8,7 @@
 //     console.log("Odd Number")
 // }
 
-// Write a program to print greatest number among 3.
+// 2. Write a program to print greatest number among 3.
 // Use if-else condition
 
 let num1 = 350

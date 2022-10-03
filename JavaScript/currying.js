@@ -1,4 +1,4 @@
-// There are two ways to currying our functions, the first one is to use bind function and second one by using the concepy of closures.
+// There are two ways to currying our functions, the first one is to use bind function and second one by using the concept of closures.
 
 
 // To understand the function currying, lets create the function multiply() which basically multiplies two parameters x and y and then logs it to the console.

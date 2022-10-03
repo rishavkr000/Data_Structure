@@ -1,7 +1,7 @@
 /*
-=> call method is used to invoke a function directly by passing in the reference which points the this variable inside the method.a
+=> call method is used to invoke a function directly by passing in the reference which points the "this" variable inside the method.
 => apply is exactly same as a call method, the only difference is it take the second argument as a array list of the parameter which needs to the passed to the function.
-=>  nbind method does not directly invoked the method but gives you the copy of that exactly same method which can be invoked later. 
+=> bind method does not directly invoked the method but gives you the copy of that exactly same method which can be invoked later. 
 */
 
 let name1 = {
