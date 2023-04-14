@@ -37,6 +37,8 @@ getRootListInvalid([1, 4, 9], console.log)
 function getRootList(valueList, callbackfn){
     // takes a list of numbers, calculates root using predefined "getRoot", calls the callbackfn with the result list.
     console.log('this is my code')
+    const a = valueList.map(val => getRoot(val, console.log))
+    callbackfn(a)
 }
 
 

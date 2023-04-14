@@ -17,11 +17,20 @@
 //     console.log("\n")
 // }
 
-let n = 9
+// let n = 9
+// let str = ""
+// for(let i = 0; i < n; i++){
+//     if([i]){
+//         str += "*"
+//     }
+//     console.log(str)
+// }
+
+let n = 4
 let str = ""
-for(let i = 0; i < n; i++){
+for(let i = 1; i <= n; i++){
     if([i]){
-        str += "*"
+        str += i
     }
     console.log(str)
 }
